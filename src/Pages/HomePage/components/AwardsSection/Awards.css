@@ -1,0 +1,56 @@
+.awards {
+  padding: 6rem 4rem;
+
+}
+.awards__cards {
+  width: 100%;
+  border-radius: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+  overflow: hidden;
+
+}
+
+.award__card {
+  background-color:#F6F5F2;
+  flex-direction: column;
+  padding: 8rem 0;
+
+}
+
+.award__card-number {
+  color:#31363F;
+  font-size: 8.7rem;
+  font-weight: 800;
+  font-family: var(--font-montserrat);
+}
+
+.award__card-name {
+  color: #303841;
+  font-family: var(--font-poppins);
+  font-size: 2.5rem;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .award__card-name {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .award__card-number {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .awards__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin: 0;
+  }
+  .award__card {
+    padding: 4rem 0;
+  }
+}

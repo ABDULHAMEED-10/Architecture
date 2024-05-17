@@ -1,0 +1,160 @@
+.hero-section {
+  background-color: var(--bg-primary);
+  padding-bottom: 3vmax;
+}
+.carousel {
+  height: 40vw;
+}
+.carousel-root{
+  width: 95vw;
+  margin: 0 auto;
+}
+.__c_image{
+  height: 40vw;
+  position: relative;
+ 
+}
+.__c_image img {
+  height: 100%;
+  object-fit:fill;
+  opacity: 0.8;
+  
+}
+.__c_image div{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content:end;
+  padding: 0 2vmax 7vmax;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 80%, rgb(0, 0, 0) 100%);
+}
+.__c_image > div > h1{
+  font-size: 8rem;
+  font-family: var(--font-montserrat);
+  color: yellow;
+}
+.without_animate{
+  transform: translateY(200%);
+}
+.animate_h, .animate_p, .animate_b{
+  transform: translateY(0%);
+}
+.animate_h{
+  transition: transform 1s ease-in-out;
+}
+.animate_p{
+  transition: transform 1.7s ease-in-out;
+}
+.animate_b{
+  transition: transform 2s ease-in-out;
+}
+.__c_image > div > h1 > span{
+  display: inline;
+  margin-right:1vmax ;
+}
+.__c_image > div > div{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: end;
+  padding: 3vmax 2vmax;
+  gap: 2vmax;
+  text-align: start;
+}
+.__c_image > div > div > p{
+  font-size: 1.6rem;
+  font-family: var(--font-poppins);
+  color: white;
+  width: 40%;
+}
+
+@media screen and (max-width: 1200px) {
+  .carousel {
+    height: 40vw;
+  }
+  .__c_image > div > h1{
+    font-size: 7rem;
+  }
+  .__c_image > div > div > p{
+    font-size: 1.5rem;
+    width: 55%;
+  }
+  .btn--primary{
+    width: 10rem;
+    font-size: 1.4rem;
+    padding: 0.9rem 0;
+  }
+  .__c_image > div{
+    padding: 8vmax 1vmax ;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .carousel {
+    height: 40vw;
+  }
+  .__c_image > div{
+    padding: 8vmax 1vmax ;
+  }
+  .__c_image > div > h1{
+    font-size: 6rem;
+  }
+  .__c_image > div > div > p{
+    font-size: 1.4rem;
+    width: 75%;
+  }
+  .btn--primary{
+    width: 8rem;
+    font-size: 1.2rem;
+    padding: 0.7rem 0;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .carousel {
+    height: 40vw;
+  }
+  .__c_image > div{
+    padding: 6vmax 1vmax ;
+
+  }
+  .__c_image > div > h1{
+    font-size: 3.5rem;
+  }
+  .__c_image > div > div > p{
+    font-size: 0.9rem;
+    width: 90%;
+  }
+  .__c_image > div > div{
+    padding: 2vmax 1vmax;
+    
+  }
+  .btn--primary{
+    width: 6rem;
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media screen and (max-width: 315px) {
+    .carousel {
+      height: 40vw;
+    } 
+    .__c_image > div > h1{
+      font-size: 2rem;
+    }
+    .__c_image > div > div > p{
+      font-size: 0.6rem;
+      width: 100%;
+    }
+    .btn--primary{
+      width: 4rem;
+      font-size: 0.5rem;
+      padding: 0.5rem 0;
+    }
+}

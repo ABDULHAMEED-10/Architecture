@@ -1,0 +1,140 @@
+.contact-page {
+  padding: 15rem 2rem;
+  background-color: var(--color-bg-secondary);
+}
+
+.contact__details {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact__caption {
+}
+
+.contact__details h2 {
+  font-size: 4rem;
+  color: white;
+  font-family: var(--font-montserrat);
+}
+
+.contact__details p {
+  font-size: 1.5rem;
+  color: var(--text-shaded-white);
+  font-family: var(--font-poppins);
+  margin: 2rem 0;
+  line-height: 2.5rem;
+}
+
+.contact__details-info {
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.contact__details-info-item {
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+.contact__icon {
+  background-color: var(--color-bg-primary);
+  color: var(--text-green);
+  font-size: 4rem;
+  height: 9rem;
+  width: 9rem;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.contact__info-text {
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: flex-start;
+  padding: 2rem 1rem 0;
+}
+
+.contact__info-text h2 {
+  font-size: 2rem;
+  font-family: var(--font-montserrat);
+  margin-bottom: 1rem;
+}
+
+.contact__info-text span {
+  font-size: 1.5rem;
+  color: var(--text-shaded-white);
+  font-family: var(--font-poppins);
+}
+
+.contact__form {
+  flex: 1;
+}
+
+.contact__details-info-item:hover .contact__icon {
+  background-color: rgb(254, 205, 26);
+  color: black;
+}
+
+.contact__form {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 0 4rem;
+}
+
+.form__userinfo {
+  width: 100%;
+  gap: 2rem;
+}
+
+.form__userinfo input {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  outline: none;
+  font-size: 1.5rem;
+  border: 1px solid var(--text-green);
+  background-color: var(--color-bg-primary);
+  color: white;
+}
+
+.form__userinfo input::placeholder {
+  color: var(--text-shaded-white);
+}
+
+.contact__form textarea {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  outline: none;
+  font-size: 1.5rem;
+  border: 1px solid var(--text-green);
+  background-color: var(--color-bg-primary);
+  color: white;
+}
+
+@media screen and (max-width: 786px) {
+  .contact-page {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .contact__form {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .form__userinfo {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .--item2 {
+    margin-left: 0;
+  }
+  .contact__details-info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
