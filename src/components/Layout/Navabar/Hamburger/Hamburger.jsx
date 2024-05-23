@@ -20,19 +20,15 @@ const Hamburger = () => {
         <div className="ham-links d-flex">
           <NavLink
             to="/"
-            className={({ isActive }) =>
-              isActive ? 'ham__active' : 'ham__link'
-            }
+            className='ham__link'
             onClick={handleNavClose}
           >
             Home
           </NavLink>
           
           <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive ? 'ham__active' : 'ham__link'
-            }
+            to="/"
+            className='ham__link'
             onClick={handleNavClose}
           >
             Contact

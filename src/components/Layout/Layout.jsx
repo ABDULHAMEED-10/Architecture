@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import Footer from './Footer/Footer';
+// import Footer from './Footer/Footer';
 import Navbar from './Navabar/Navbar';
 
 const Layout = ({ children }) => {
@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
     <>
       <Navbar />
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

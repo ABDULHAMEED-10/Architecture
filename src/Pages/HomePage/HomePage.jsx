@@ -1,8 +1,8 @@
 import { ServiceSection } from '../ServiceSection/ServiceSection';
 import Layout from './../../components/Layout/Layout';
-import Awards from './components/AwardsSection/Awards';
-import Carousel from './components/Carousel/Carousel';
-import { ProjectsSection } from './components/ProjectsSection/ProjectsSection';
+// import Awards from './components/AwardsSection/Awards';
+// import Carousel from './components/Carousel/Carousel';
+// import { ProjectsSection } from './components/ProjectsSection/ProjectsSection';
 import HeroSection from './components/heroSection/HeroSection';
 
 const HomePage = () => {
@@ -11,10 +11,9 @@ const HomePage = () => {
       <div className="homepage">
         <HeroSection />
         <ServiceSection />
-        <ProjectsSection />
+        {/* <ProjectsSection />
         <Awards />
-        <Carousel />
-       
+        <Carousel /> */}
       </div>
     </Layout>
   );

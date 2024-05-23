@@ -1,160 +1,369 @@
+@keyframes slide-bg-animation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(10%);
+  }
+}
+@keyframes opacity-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+@keyframes slide-main-animation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 33%;
+  }
+}
+@keyframes h1-slide {
+  0% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes p-slide {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes button-slide {
+  0% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes h4-animation {
+  0% {
+    transform: translatex(40%);
+  }
+  100% {
+    transform: translatex(0%);
+  }
+}
 .hero-section {
-  background-color: var(--bg-primary);
-  padding-bottom: 3vmax;
-}
-.carousel {
-  height: 40vw;
-}
-.carousel-root{
-  width: 95vw;
-  margin: 0 auto;
-}
-.__c_image{
-  height: 40vw;
   position: relative;
- 
-}
-.__c_image img {
-  height: 100%;
-  object-fit:fill;
-  opacity: 0.8;
-  
-}
-.__c_image div{
-  position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.hero_blur {
+  position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #586571;
+  opacity: 0.9;
   display: flex;
+  padding: 10vmax 8vmax;
   flex-direction: column;
-  align-items: start;
-  justify-content:end;
-  padding: 0 2vmax 7vmax;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 80%, rgb(0, 0, 0) 100%);
-}
-.__c_image > div > h1{
-  font-size: 8rem;
-  font-family: var(--font-montserrat);
-  color: yellow;
-}
-.without_animate{
-  transform: translateY(200%);
-}
-.animate_h, .animate_p, .animate_b{
-  transform: translateY(0%);
-}
-.animate_h{
-  transition: transform 1s ease-in-out;
-}
-.animate_p{
-  transition: transform 1.7s ease-in-out;
-}
-.animate_b{
-  transition: transform 2s ease-in-out;
-}
-.__c_image > div > h1 > span{
-  display: inline;
-  margin-right:1vmax ;
-}
-.__c_image > div > div{
-  display: flex;
-  flex-direction: row;
   justify-content: start;
-  align-items: end;
-  padding: 3vmax 2vmax;
-  gap: 2vmax;
-  text-align: start;
+  align-items: start;
 }
-.__c_image > div > div > p{
-  font-size: 1.6rem;
-  font-family: var(--font-poppins);
-  color: white;
-  width: 40%;
+.hero_blur h4 {
+  color: #cbbc9d;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.9rem;
+  font-weight: bold;
+  z-index: 3;
+  letter-spacing: 3px;
+  padding-left: 4px;
+  text-transform: uppercase;
+  animation: h4-animation 1s;
 }
 
-@media screen and (max-width: 1200px) {
-  .carousel {
-    height: 40vw;
+.hero_blur h1 {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 8.7rem;
+  font-weight: 500;
+  z-index: 3;
+  width: 50%;
+  line-height: 9rem;
+  text-transform: uppercase;
+  animation: h1-slide 1s;
+}
+.hero_blur p {
+  color: rgb(255, 255, 255);
+  font-family: "Roborto", sans-serif;
+  font-size: 14px;
+  height: auto;
+  z-index: 3;
+  width: 40%;
+  letter-spacing: 1px;
+  padding-left: 4px;
+  line-height: 24px;
+  padding-top: 4rem;
+  animation: p-slide 1s;
+}
+.btn-primary {
+  background-color: #cbbc9d;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+  padding: 1.5rem 3.2rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: button-slide 1s;
+}
+
+.main_image {
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  animation: slide-bg-animation 1s reverse;
+}
+.blue_div {
+  position: absolute;
+  top: 0;
+  right: 18rem;
+  width: 20%;
+  height: 60%;
+  background-color: #556fa2;
+  z-index: 3;
+  opacity: 0.8;
+  animation: opacity-animation 1s;
+}
+.sec_image {
+  position: absolute;
+  top: 13rem;
+  right: 25rem;
+  width: 33%;
+  height: 100%;
+  z-index: 4;
+  animation: slide-main-animation 1s;
+}
+
+@media screen and (max-width: 1400px) {
+  .hero_blur{
+    padding: 14vmax 6vmax;
   }
-  .__c_image > div > h1{
-    font-size: 7rem;
-  }
-  .__c_image > div > div > p{
-    font-size: 1.5rem;
+  .hero_blur h1 {
+    font-size: 8rem;
     width: 55%;
   }
-  .btn--primary{
-    width: 10rem;
-    font-size: 1.4rem;
-    padding: 0.9rem 0;
+  .hero_blur p {
+    width: 40%;
+    font-size: 1.6rem;
   }
-  .__c_image > div{
-    padding: 8vmax 1vmax ;
+  .hero_blur h4 {
+    font-size: 3.1rem;
   }
+  .btn-primary {
+    padding: 1.6rem 3.2rem;
+  }
+  .main_image {
+    width: 72%;
+  }
+  .blue_div {
+    right: 15rem;
 }
-
-@media screen and (max-width: 830px) {
-  .carousel {
-    height: 40vw;
+.sec_image {
+        right: 20rem;
+        height: 100%;
+        width: 31%;
+}
+}
+@media screen and (max-width: 1200px) {
+    .hero_blur{
+        padding: 12.5vmax 5vmax;
+    }
+  .hero_blur h1 {
+    font-size: 7rem;
+    width: 65%;
+    line-height: 8rem;
   }
-  .__c_image > div{
-    padding: 8vmax 1vmax ;
+  .hero_blur p {
+    width: 48%;
+    font-size: 1.6rem;
   }
-  .__c_image > div > h1{
+  .hero_blur h4 {
+    font-size: 2.5rem;
+  }
+  .btn-primary {
+    padding: 1.4rem 3rem;
+  }
+    .main_image {
+        width: 68%;
+    }
+    .blue_div {
+        right: 11rem;
+    }
+    .sec_image {
+        right: 12rem;
+        height: 100%;
+        width: 30%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .hero_blur{
+        padding: 15vmax 6vmax;
+    }
+  .hero_blur h1 {
     font-size: 6rem;
+    width: 60%;
+    line-height: 7rem;
   }
-  .__c_image > div > div > p{
-    font-size: 1.4rem;
-    width: 75%;
+  .hero_blur p {
+    width: 55%;
   }
-  .btn--primary{
-    width: 8rem;
-    font-size: 1.2rem;
-    padding: 0.7rem 0;
+  .hero_blur h4 {
+    font-size: 2rem;
   }
+  .btn-primary {
+    padding: 1.2rem 2.5rem;
+  }
+    .main_image {
+        width: 62%;
+    }
+    .blue_div {
+        right: 8rem;
+    }
+    .sec_image {
+        right: 8rem;
+        height: 100%;
+        width: 29%;
+    }
 }
-
-@media screen and (max-width: 570px) {
-  .carousel {
-    height: 40vw;
+@media screen and (max-width: 800px) {
+    .hero_blur{
+        padding: 20vmax 8vmax;
+    }
+  .hero_blur h1 {
+    font-size: 5rem;
+    width: 70%;
+    line-height: 6rem;
   }
-  .__c_image > div{
-    padding: 6vmax 1vmax ;
-
+  .hero_blur p {
+    width: 65%;
   }
-  .__c_image > div > h1{
-    font-size: 3.5rem;
+  .hero_blur h4 {
+    font-size: 2.2rem;
   }
-  .__c_image > div > div > p{
-    font-size: 0.9rem;
+  .btn-primary {
+    padding: 1rem 2.2rem;
+  }
+    .main_image {
+        width: 58%;
+    }
+    .blue_div {
+        right: 6rem;
+    }
+    .sec_image {
+        right: 5rem;    
+        height: 100%;
+        width: 28%;
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    .hero_blur{
+        padding: 20vmax 2vmax;
+    }
+  .hero_blur h1 {
+    font-size: 4.7rem;
+    width: 90%;
+    line-height: 5rem;
+  }
+  .hero_blur p {
+    width: 80%;
+  }
+  .hero_blur h4 {
+    font-size: 2rem;
+  }
+  .btn-primary {
+    padding: 0.8rem 2rem;
+  }
+    .main_image {
+        width: 55%;
+    }
+    .blue_div {
+        display: none;
+    }
+    .sec_image {
+        display: none;
+    }
+}
+@media screen and (max-width: 400px) {
+    .hero_blur{
+        padding: 22vmax 2vmax;
+    }
+  .hero_blur h1 {
+    font-size: 3.7rem;
+    width: 90%;
+    line-height: 4rem;
+  }
+  .hero_blur p {
     width: 90%;
   }
-  .__c_image > div > div{
-    padding: 2vmax 1vmax;
-    
+  .hero_blur h4 {
+    font-size: 1.9rem;
   }
-  .btn--primary{
-    width: 6rem;
-    font-size: 0.7rem;
-    padding: 0.5rem 0;
+  .btn-primary {
+    padding: 0.6rem 1.8rem;
   }
+    .main_image {
+        width: 50%;
+    }
+    .blue_div {
+        display: none;
+    }
+    .sec_image {
+        display: none;
+    }
 }
+@media screen and (max-width: 280px){
+    .hero_blur{
+        padding: 25vmax 6vmax;
+    }
+    .hero_blur h1 {
+        font-size: 2.7rem;
+        width: 100%;
+        line-height: 3rem;
+    }
+    .hero_blur p {
+        width: 100%;
+    }
+    .hero_blur h4 {
+        font-size: 1.7rem;
+    }
+    .btn-primary {
+        padding: 0.4rem 1.6rem;
+    }
+    .main_image {
+        width: 45%;
+    }
+    .blue_div {
+        display: none;
+    }
+    .sec_image {
+        display: none;
+    }
 
-@media screen and (max-width: 315px) {
-    .carousel {
-      height: 40vw;
-    } 
-    .__c_image > div > h1{
-      font-size: 2rem;
-    }
-    .__c_image > div > div > p{
-      font-size: 0.6rem;
-      width: 100%;
-    }
-    .btn--primary{
-      width: 4rem;
-      font-size: 0.5rem;
-      padding: 0.5rem 0;
-    }
 }
